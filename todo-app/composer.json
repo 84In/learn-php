@@ -1,0 +1,12 @@
+{
+  "name": "todo-app/todo-app",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Src\\": "src/"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.6"
+  }
+}
