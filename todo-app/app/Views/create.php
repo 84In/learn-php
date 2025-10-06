@@ -3,21 +3,25 @@
 
 <head>
     <title>Thêm công việc</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/base.css">
 </head>
 
 <body>
-    <h1>Thêm công việc mới</h1>
-    <form method="POST" action="/todos/store">
-        <label>Tiêu đề:</label><br>
-        <input type="text" name="title" required><br><br>
+    <div class="container-create">
+        <h1>Thêm công việc mới</h1>
+        <form method="POST" action="/todos/store">
+            <label>Tiêu đề:</label><br>
+            <input class="input" type="text" name="title" required><br><br>
 
-        <label>Mô tả:</label><br>
-        <textarea name="description"></textarea><br><br>
+            <label>Mô tả:</label><br>
+            <textarea class="input" name="description"></textarea><br><br>
 
-        <button type="submit">Lưu</button>
-    </form>
+            <button class="button button-save" type="submit">Lưu</button>
+        </form>
 
-    <p><a href="/todos">← Quay lại danh sách</a></p>
+        <button class="button button-back" onclick="window.location.href='/todos'">Quay về danh sách công việc</button>
+    </div>
 </body>
 
 </html>
