@@ -39,7 +39,7 @@ class Todo
             if (!$result) {
                 return ['error' => 'Todo not found.'];
             }
-            return ['success' => 'Todo fetched successfully.', $result];
+            return  $result;
         } catch (Exception | InvalidArgumentException $e) {
             error_log("Validation Error [getTodoById]: " . $e->getMessage());
             return ['error' => 'There was a validation error: ' . $e->getMessage()];

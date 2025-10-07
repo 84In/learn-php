@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Danh sách công việc</title>
     <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
@@ -27,7 +28,19 @@
                         <td><?= htmlspecialchars($todo['title']) ?></td>
                         <td><?= htmlspecialchars($todo['description']) ?></td>
                         <td><?= htmlspecialchars($todo['created_at']) ?></td>
-                        <td><a href="#"><?= htmlspecialchars($todo['id']) ?></a></td>
+                        <td>
+                            <div class="action-menu">
+                                <button class="menu-trigger"><i class="fa-solid fa-ellipsis"></i></button>
+                                <div class="menu-box">
+                                    <button class="btn-edit" onclick="window.location.href='/todos/edit/<?= htmlspecialchars($todo['id']) ?>'">
+                                        <i class="fa-solid fa-pen-to-square"></i> Sửa
+                                    </button>
+                                    <button class="btn-delete" onclick="window.location.href='/todos/delete/<?= htmlspecialchars($todo['id']) ?>'">
+                                        <i class="fa-solid fa-trash"></i> Xóa
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>

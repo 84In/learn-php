@@ -162,6 +162,94 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* Giới hạn độ rộng cột chỉnh sửa */
+th:last-child,
+td:last-child {
+  width: 90px;
+  text-align: center;
+}
+
+/* Nút ba chấm */
+.menu-trigger {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px 8px;
+  transition: background 0.2s;
+}
+
+.menu-trigger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Box chứa nút sửa/xóa */
+.action-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-box {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 5;
+  animation: fadeIn 0.15s ease-out;
+}
+
+/* Hiện menu khi hover vào vùng */
+.action-menu:hover .menu-box {
+  display: flex;
+}
+
+/* Nút bên trong menu */
+.menu-box button {
+  background: none;
+  border: none;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-box button:hover {
+  background-color: #f1f7ff;
+}
+
+/* Màu riêng cho từng nút */
+.menu-box .btn-edit:hover {
+  color: #007bff;
+}
+
+.menu-box .btn-delete:hover {
+  color: #dc3545;
+}
+
+/* Animation mượt */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* ANIMATION */
 @keyframes fadeIn {

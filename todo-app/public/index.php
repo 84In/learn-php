@@ -29,6 +29,9 @@ $router->get('/', 'App\Controllers\TodoController@index');
 $router->get('/todos', 'App\Controllers\TodoController@index');
 $router->get('/todos/create', 'App\Controllers\TodoController@create');
 $router->post('/todos/store', 'App\Controllers\TodoController@store');
+$router->get('/todos/delete/{id}', 'App\Controllers\TodoController@delete');
+$router->get('/todos/edit/{id}', 'App\Controllers\TodoController@edit');
+$router->post('/todos/update/{id}', 'App\Controllers\TodoController@update');
 
 // Chạy router
 $router->dispatch();
