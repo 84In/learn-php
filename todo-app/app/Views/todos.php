@@ -1,12 +1,11 @@
-<!-- app/Views/todos.php -->
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <title>Danh sách công việc</title>
-    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/base.css">
 </head>
 
 <body>
